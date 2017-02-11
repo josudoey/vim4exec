@@ -9,11 +9,7 @@ function! SetExec()
     let w:exec=input('run exec:',getwinvar(winnr(),"exec"))
 endfunction
 function! Realpath(path)
-    if a:path[0]=="/"
-        return a:path
-    else
-        return resolve(getcwd()."/".a:path)
-    end
+    return expand('%:p')
 endfunction
 function! GetDefaultExec()
     let a:f=Realpath(bufname("%"))
