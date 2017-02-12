@@ -26,7 +26,3 @@ function! Run()
     let a:cmd="!".a:exec." ".a:args
     execute a:cmd
 endfunction
-
-nnoremap <LEADER><F9> :call SetExec()<CR>
-nnoremap <F9> :call Run()<CR>
-nnoremap <LEADER><F10> :call SetArgs()<CR>
